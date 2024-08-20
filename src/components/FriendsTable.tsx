@@ -33,7 +33,7 @@ export const FriendsTable: React.FC = () => {
                             <TableCell>{friend.phone || 'N/A'}</TableCell>
                             <TableCell>
                                 {friend.addresses.map((address, index) => (
-                                    <Tooltip
+                                    <Tooltip // si me paro encima de la address, me muestra sus atributos.
                                         key={index}
                                         title={`${address.street}, ${address.city}, ${address.state} - ${address.code}`}
                                         arrow
