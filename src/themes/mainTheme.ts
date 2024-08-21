@@ -9,19 +9,15 @@ const themeOptions = {
             main: '#4996dc'
         }
     },
-    background: {
-        default: '#ffffff',
-    },
-    MuiTableCell: {
-        styleOverrides: {
-            head: {
-                backgroundColor: '#646cff',
-                color: '#ffffff',
-                fontWeight: 'bold',
-            },
-        },
+    components: {
+        MuiTable: {
+            defaultProps: {
+                size: 'medium',
+            }
+        }
+    }
 }
-}
+
 
 const mainTheme = createTheme(themeOptions);
 

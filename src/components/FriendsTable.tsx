@@ -1,7 +1,18 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableHead, TableRow, Tooltip, CircularProgress, Alert } from '@mui/material';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableRow,
+    Tooltip,
+    CircularProgress,
+    Alert,
+    Typography
+} from '@mui/material';
 import { useFriends } from '../hooks/useFetchFriends';
 import { Friend } from '../types/Friend';
+import mainTheme from "../themes/mainTheme.ts";
 
 export const FriendsTable: React.FC = () => {
     const { friends, loading, error } = useFriends();
@@ -16,7 +27,10 @@ export const FriendsTable: React.FC = () => {
 
     return (
         <div className="table-container">
-            <Table>
+            <Typography style={{ color: mainTheme.palette.secondary.main }}>
+                Friends List (usando theme palette!)
+            </Typography>
+            <Table style = {mainTheme.components?.MuiTable?.defaultProps}>
                 <TableHead>
                     <TableRow>
                         <TableCell>Name</TableCell>
